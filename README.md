@@ -33,6 +33,7 @@ pip install streamlit
 pip install Pillow
 pip install mahotas
 pip install scipy
+pip install Bitdesc
 ```
 
 ## Usage
