@@ -145,7 +145,7 @@ def display_images_by_class(predicted_class, signatures, image_count):
         if not isinstance(relative_path, str):
             st.write(f"Error: expected a string for relative_path but got {type(relative_path)}")
             continue
-        img_path = os.path.join('images', relative_path)
+        img_path = os.path.join("images", *relative_path.replace("\\", "/").split("/"))
         image = Image.open(img_path)
         cols[idx % 4].image(image, caption=relative_path, use_container_width=True)
 
@@ -784,7 +784,7 @@ def cbir_basic():
             
             for i in range(image_count):
                 dist, relative_path, folder_name, class_label = distances[i]
-                img_path = os.path.join('images', relative_path)
+                img_path = os.path.join("images", *relative_path.replace("\\", "/").split("/"))
                 similar_img = Image.open(img_path)
                 
                 with cols[i % num_cols]:
@@ -1023,7 +1023,7 @@ def cbir_advanced():
             for i in range(min(image_count, len(distances))):
                 dist, relative_path, class_label = distances[i]
                 folder_name = os.path.basename(os.path.dirname(relative_path))
-                img_path = os.path.join('images', relative_path)
+                img_path = os.path.join("images", *relative_path.replace("\\", "/").split("/"))
                 
                 try:
                     similar_img = Image.open(img_path)
@@ -1115,7 +1115,7 @@ def multimodal():
                     folder_name = signature[-2]
                     
                     try:
-                        img_path = os.path.join('images', relative_path)
+                        img_path = os.path.join("images", *relative_path.replace("\\", "/").split("/"))
                         img = Image.open(img_path)
                         
                         with cols[idx % num_cols]:
