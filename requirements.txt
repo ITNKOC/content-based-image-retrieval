@@ -6,4 +6,3 @@ streamlit
 Pillow
 mahotas
 scipy
-Bitdesc
