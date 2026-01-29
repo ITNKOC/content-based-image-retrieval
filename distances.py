@@ -10,7 +10,7 @@ def manhattan(v1, v2):
 def euclidean(v1, v2):
     v1 = np.array(v1).astype('float')
     v2 = np.array(v2).astype('float')
-    dist = np.sqrt(np.sum(v1-v2)**2)
+    dist = np.sqrt(np.sum((v1-v2)**2))
     return dist
 
 def chebyshev(v1, v2):
