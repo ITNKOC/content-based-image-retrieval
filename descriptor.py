@@ -1,5 +1,5 @@
 from skimage.feature import graycomatrix, graycoprops
-from BiT import bio_taxo
+from Bit import bio_taxo
 from mahotas.features import haralick
 import cv2
 import numpy as np
