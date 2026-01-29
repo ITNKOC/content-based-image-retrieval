@@ -322,6 +322,66 @@ def apply_modern_css():
         .sidebar-subtitle { font-size: 0.75rem; color: var(--text-muted) !important; }
         .sidebar-stats { text-align: center; font-size: 0.8rem; color: var(--text-muted) !important; }
         .sidebar-stats strong { color: var(--text-secondary) !important; }
+
+        /* Style Streamlit's native sidebar collapse button as hamburger */
+        [data-testid="stSidebarCollapseButton"] {
+            position: fixed !important;
+            top: 12px !important;
+            left: 12px !important;
+            z-index: 999999 !important;
+            width: 40px !important;
+            height: 40px !important;
+            background: var(--bg-card) !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 10px !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
+            transition: all 0.3s ease !important;
+        }
+        [data-testid="stSidebarCollapseButton"]:hover {
+            background: var(--accent-primary) !important;
+            border-color: var(--accent-primary) !important;
+            transform: scale(1.05) !important;
+        }
+        [data-testid="stSidebarCollapseButton"] svg {
+            stroke: var(--text-secondary) !important;
+            transition: all 0.3s ease !important;
+        }
+        [data-testid="stSidebarCollapseButton"]:hover svg {
+            stroke: white !important;
+        }
+
+        /* Style the expand button when sidebar is collapsed */
+        [data-testid="stSidebarCollapsedControl"] {
+            position: fixed !important;
+            top: 12px !important;
+            left: 12px !important;
+            z-index: 999999 !important;
+        }
+        [data-testid="stSidebarCollapsedControl"] > div {
+            width: 40px !important;
+            height: 40px !important;
+            background: var(--bg-card) !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 10px !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
+            transition: all 0.3s ease !important;
+        }
+        [data-testid="stSidebarCollapsedControl"] > div:hover {
+            background: var(--accent-primary) !important;
+            border-color: var(--accent-primary) !important;
+            transform: scale(1.05) !important;
+        }
+        [data-testid="stSidebarCollapsedControl"] svg {
+            stroke: var(--text-secondary) !important;
+        }
+        [data-testid="stSidebarCollapsedControl"] > div:hover svg {
+            stroke: white !important;
+        }
+
+        /* Sidebar smooth transition */
+        section[data-testid="stSidebar"] {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
         </style>
         """
     else:
@@ -546,6 +606,66 @@ def apply_modern_css():
         .sidebar-subtitle { font-size: 0.75rem; color: var(--text-muted) !important; }
         .sidebar-stats { text-align: center; font-size: 0.8rem; color: var(--text-muted) !important; }
         .sidebar-stats strong { color: var(--text-secondary) !important; }
+
+        /* Style Streamlit's native sidebar collapse button as hamburger */
+        [data-testid="stSidebarCollapseButton"] {
+            position: fixed !important;
+            top: 12px !important;
+            left: 12px !important;
+            z-index: 999999 !important;
+            width: 40px !important;
+            height: 40px !important;
+            background: var(--bg-card) !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 10px !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+            transition: all 0.3s ease !important;
+        }
+        [data-testid="stSidebarCollapseButton"]:hover {
+            background: var(--accent-primary) !important;
+            border-color: var(--accent-primary) !important;
+            transform: scale(1.05) !important;
+        }
+        [data-testid="stSidebarCollapseButton"] svg {
+            stroke: var(--text-secondary) !important;
+            transition: all 0.3s ease !important;
+        }
+        [data-testid="stSidebarCollapseButton"]:hover svg {
+            stroke: white !important;
+        }
+
+        /* Style the expand button when sidebar is collapsed */
+        [data-testid="stSidebarCollapsedControl"] {
+            position: fixed !important;
+            top: 12px !important;
+            left: 12px !important;
+            z-index: 999999 !important;
+        }
+        [data-testid="stSidebarCollapsedControl"] > div {
+            width: 40px !important;
+            height: 40px !important;
+            background: var(--bg-card) !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 10px !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+            transition: all 0.3s ease !important;
+        }
+        [data-testid="stSidebarCollapsedControl"] > div:hover {
+            background: var(--accent-primary) !important;
+            border-color: var(--accent-primary) !important;
+            transform: scale(1.05) !important;
+        }
+        [data-testid="stSidebarCollapsedControl"] svg {
+            stroke: var(--text-secondary) !important;
+        }
+        [data-testid="stSidebarCollapsedControl"] > div:hover svg {
+            stroke: white !important;
+        }
+
+        /* Sidebar smooth transition */
+        section[data-testid="stSidebar"] {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
         </style>
         """
 
